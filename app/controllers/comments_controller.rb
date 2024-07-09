@@ -34,7 +34,7 @@ class CommentsController < ApplicationController
         format.html { redirect_back fallback_location: root_path, notice: "Comment was successfully created." }
         format.json { render :show, status: :created, location: @comment }
         format.js do
-          render template: "comments/create.js.erb"
+          render template: "comments/create"
         end
       else
         format.html { render :new, status: :unprocessable_entity }
