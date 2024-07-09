@@ -1,3 +1,1 @@
-var unRequestLink = $("<%= j(render "follow_requests/follow_unfollow", sender: @follow_request.sender, recipient: @follow_request.recipient) %>" )
-
-$("#follow_request_form").replaceWith(unRequestLink)
+$(".<%=dom_id(@follow_request.sender)%>_<%=dom_id(@follow_request.recipient)%>_follow_unfollow").replaceWith("<%= j(render 'follow_requests/follow_unfollow', sender: @follow_request.sender, recipient: @follow_request.recipient) %>");
